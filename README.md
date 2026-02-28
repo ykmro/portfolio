@@ -200,10 +200,10 @@
 
 ### 10-1. 使用予定の技術
 
-- フレームワーク：Ruby on Rails
+- フレームワーク：Ruby on Rails 7.x
 - DB：Supabase（検討中）
 - デプロイ先：Render
-- 使用予定ライブラリ：Hotwire
+- 使用予定ライブラリ：Hotwire（Turbo / Stimulus）
 
 ---
 
