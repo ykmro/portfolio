@@ -2,7 +2,7 @@
 Figma：<https://www.figma.com/design/w6qV5XVVQofbW93Wmgcten/%E8%8B%B1%E8%AA%9E%E5%AD%A6%E7%BF%92%E3%82%A2%E3%83%97%E3%83%AA%E7%94%BB%E9%9D%A2%E6%A7%8B%E6%88%90?node-id=1-2&t=BcIUYr3NtkiB2ZJt-1>
 
 ### ER図
-https://gyazo.com/294cb8e1b72a6a2492bf9db6d7e9cec0
+https://gyazo.com/5a1ae7e0dc07fa9158e412f5a4dd9629
 
 ## 1. サービス概要（※最後に書いてOK）
 
