@@ -20,4 +20,4 @@ COPY . .
 
 EXPOSE 3000
 # CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"]
-CMD ["bash", "-c", "bundle exec rails db:migrate && RAILS_ENV=production bundle exec rails s -p 3000 -b '0.0.0.0'"]
+CMD ["bash", "-c", "bundle exec rails db:create && bundle exec rails db:migrate && RAILS_ENV=production bundle exec rails s -p 3000 -b '0.0.0.0'"]
