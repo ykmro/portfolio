@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
-  root "pages#top"
+  root "top#index"
+
+  resources :situations, only: [:index] do
+    member do
+      get :result
+    end
+  end
+
+  resources :steps, only: [:show] do
+    member do
+      post :next
+      get :result
+    end
+  end
 
   get "up" => "rails/health#show", as: :rails_health_check
-  get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-  get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 end
