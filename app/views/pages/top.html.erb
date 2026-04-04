@@ -1,2 +1,19 @@
+<% content_for :head do %>
+  <%= javascript_include_tag("pages/top") %>
+<% end %>
+
 <h1>Pages#top</h1>
 <p>Find me in app/views/pages/top.html.erb</p>
+
+<ul>
+  <% @situations.each do |situation| %>
+    <li>
+      <div class="modal">
+        <%= situation.title %>
+        <%= situation.overview %>
+        <%= situation.scenario %>
+        <%= link_to "Link", situation_path(situation) %>
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -1,6 +1,11 @@
 class SituationsController < ApplicationController
   def index
-    # パラメータで渡ってきたIDのタイトルやあらすじ、サムネイルを取得して表示
+    # トップページで一覧表示
+  end
+
+  def show
+    situations = Situation.all
+    @situation = situations.find(params[:id])
   end
 
   def result

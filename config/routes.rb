@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root "top#index"
+  root "pages#top"
 
-  resources :situations, only: [:index] do
+  resources :situations, only: [:index, :show] do
     member do
       get :result
     end
