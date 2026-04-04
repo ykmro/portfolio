@@ -6,6 +6,7 @@ class SituationsController < ApplicationController
   def show
     situations = Situation.all
     @situation = situations.find(params[:id])
+    @step = @situation.steps.find_by(step_number: 1)
   end
 
   def result
