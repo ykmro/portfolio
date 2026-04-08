@@ -1,2 +1,12 @@
 <h1>Steps#show</h1>
-<p>Find me in app/views/steps/show.html.erb</p>
+<p><%= @step.body %></p>
+
+<%= form_with url: next_step_path(@step), method: :post do |f| %>
+  <% @choices.each do |choice| %>
+    <div>
+      <%= f.radio_button :choice_id, choice.id %>
+      <%= f.label :choice_id, choice.body, value: choice.id %>
+    </div>
+  <% end %>
+  <%= f.submit "回答する" %>
+<% end %>
