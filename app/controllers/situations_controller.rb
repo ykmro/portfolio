@@ -10,6 +10,10 @@ class SituationsController < ApplicationController
   end
 
   def result
-    # パラメータで渡ってきたID、セッションで渡ってきた回答IDを取得して結果を表示
+    # セッションで保持した選択肢を一覧表示
+    sessions = session[:choice_ids]
+    @choices = Choice.where(id: sessions)
+    # セッションを破棄
+    # session[:choice_ids] = []
   end
 end

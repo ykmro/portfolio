@@ -1,2 +1,13 @@
 <h1>Situations#result</h1>
 <p>Find me in app/views/situations/result.html.erb</p>
+<ul>
+  <% @choices.each do |choice| %>
+    <li>
+      <div class="modal">
+        <%= choice.body %>
+        <%= choice.feedback %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "TOPへ戻る", root_path %>

@@ -11,13 +11,12 @@ class StepsController < ApplicationController
     session[:choice_ids] ||= []
     session[:choice_ids] << params[:choice_id]
 
-    if @next_step
-      redirect_to @next_step
-    else
-      redirect_to result_situation_path(id: @step.situation_id)
-    end
+    redirect_to result_step_path(@step)
   end
 
   def result
+    @step = Step.find(params[:id])
+    @next_step = @step.next_step
+    @choice = Choice.find(session[:choice_ids].last.to_i)
   end
 end

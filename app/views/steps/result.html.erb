@@ -1,2 +1,11 @@
 <h1>Steps#result</h1>
 <p>Find me in app/views/steps/result.html.erb</p>
+<p>
+  <%= @choice.feedback %>
+</p>
+<% if @next_step %>
+  <%= link_to "Link", step_path(@next_step) %>
+<% else %>
+  <%= link_to "Link", result_situation_path(id: @step.situation_id) %>
+<% end %>
+
