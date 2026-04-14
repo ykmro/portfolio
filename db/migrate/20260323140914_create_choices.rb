@@ -1,4 +1,4 @@
-class CreateChoices < ActiveRecord::Migration[7.2]
+class CreateChoices < ActiveRecord::Migration[7.0]
   def change
     create_table :choices do |t|
       t.references :step, null: false, foreign_key: true
