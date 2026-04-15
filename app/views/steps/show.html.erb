@@ -1,12 +1,28 @@
-<h1>Steps#show</h1>
-<p><%= @step.body %></p>
-
-<%= form_with url: next_step_path(@step), method: :post do |f| %>
-  <% @choices.each do |choice| %>
-    <div>
-      <%= f.radio_button :choice_id, choice.id %>
-      <%= f.label :choice_id, choice.body, value: choice.id %>
-    </div>
-  <% end %>
-  <%= f.submit "回答する" %>
+<% content_for :head do %>
+  <%= javascript_include_tag("pages/top") %>
 <% end %>
+<main class="situation show container">
+  <section class="hero">
+    <h1 class="page_title">SCENE</h1>
+    <h2 class="situation_title">脱獄する時に使える英会話</h2>
+    <div class="inner">
+      <div class="thum">
+        <%= image_tag "top/situation_thum_1.png" %>
+      </div>
+      <div class="txts">
+        <p class="txt">
+          <%= @step.body %>
+        </p>
+        <%= form_with url: next_step_path(@step), id: "choice_form", method: :post do |f| %>
+          <% @choices.each do |choice| %>
+            <div class="button_choice txt">
+              <%= f.radio_button :choice_id, choice.id %>
+              <%= f.label :choice_id, choice.body, value: choice.id %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+    </div>
+  </section>
+</main>

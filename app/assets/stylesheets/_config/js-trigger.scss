@@ -1,0 +1,18 @@
+.js-inview {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: transform 1s, opacity 1s;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.js-accordion {
+  cursor: pointer;
+
+  & + .js-accordion_target {
+    display: none;
+  }
+}

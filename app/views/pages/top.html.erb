@@ -1,19 +1,42 @@
 <% content_for :head do %>
   <%= javascript_include_tag("pages/top") %>
 <% end %>
-
-<h1>Pages#top</h1>
-<p>Find me in app/views/pages/top.html.erb</p>
-
-<ul>
-  <% @situations.each do |situation| %>
-    <li>
-      <div class="modal">
-        <%= situation.title %>
-        <%= situation.overview %>
-        <%= situation.scenario %>
-        <%= link_to "Link", situation_path(situation) %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<main class="top container">
+  <section class="hero">
+    <h２ class="title">役に立たない。<br>でも、忘れない。</h２>
+    <p class="txt">
+      新感覚エクストリーム英語学習アプリ。<br>
+      一生訪れないかもしれない極限の状況で<br>
+      生きるための英語を学びましょう。
+    </p>
+  </section>
+  <section class="about">
+    <h２ class="title">ABOUT <span>WHATIF?</span></h２>
+    <p class="txt">
+      実用的なビジネス英会話より、映画のふとしたフレーズが頭に残る。<br>
+      それはきっと情景とともにあなたの脳に記憶されているから。<br>
+      このアプリは、物語のワンシーンのような状況で英語を学ぶことができます。<br>
+      「次はどんな場面が来るんだろう？」<br>
+      純粋な好奇心で続けられる学びを目指します。
+    </p>
+  </section>
+  <section class="scenes">
+    <ul class="situations">
+      <% @situations.each_with_index do |situation, index| %>
+        <li class="situation">
+          <div class="thum">
+              <a href="<%= url_for(situation_path(situation)) %>">
+                <%= image_tag "top/situation_thum_#{index + 1}.png" %>
+              </a>
+          </div>
+          <div class="modal">
+            <%= situation.title %>
+            <%= situation.overview %>
+            <%= situation.scenario %>
+            <%= link_to "Link", situation_path(situation) %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</main>

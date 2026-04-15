@@ -1,0 +1,20 @@
+@import '_config/index';
+
+.header {
+  display: flex;
+  align-items: center;
+  @include pc {
+    height: 100px;
+    @include liquid {
+      height: pcvw(100);
+    }
+  }
+  .logo {
+    @include pc {
+      width: 148px;
+      @include liquid {
+        width: pcvw(148);
+      }
+    }
+  }
+}

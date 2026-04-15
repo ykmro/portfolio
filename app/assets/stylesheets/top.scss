@@ -1,0 +1,75 @@
+@import '_config/index';
+
+.top {
+  @include pc {
+    padding-top: 60px;
+    padding-bottom: 180px;
+    @include liquid {
+      padding-top: pcvw(60);
+      padding-bottom: pcvw(180);
+    }
+  }
+  .hero {
+    .title {
+      @include pc {
+        font-size: 56px;
+        @include liquid {
+          font-size: pcvw(56);
+        }
+      }
+    }
+  }
+  .about {
+    text-align: center;
+    @include pc {
+      margin-top: 180px;
+      @include liquid {
+        margin-top: pcvw(180);
+      }
+    }
+    .title {
+      width: 100%;
+      display: inline-block;
+      @include pc {
+        font-size: 56px;
+        @include liquid {
+          font-size: pcvw(56);
+        }
+      }
+      span {
+        color: #FF3B30;
+        padding-left: .2em;
+      }
+    }
+    .txt {
+      display: inline-block;
+      line-height: 2.4;
+    }
+  }
+  .scenes {
+    .situations {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include pc {
+        margin-top: 80px;
+        @include liquid {
+          margin-top: pcvw(80);
+        }
+      }
+      .situation {
+        &:nth-child(n+2) {
+          @include pc {
+            margin-left: 20px;
+            @include liquid {
+              margin-left: pcvw(20);
+            }
+          }
+        }
+        .modal {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,24 @@
-<h1>Situations#show</h1>
-<p>Find me in app/views/situations/show.html.erb</p>
-<div>
-  <%= @situation.title %>
-  <%= @situation.overview %>
-  <%= @situation.scenario %>
-  <%= link_to "Link", step_path(@step) %>
-</div>
+<% content_for :head do %>
+  <%= javascript_include_tag("pages/top") %>
+<% end %>
+<main class="situation show container">
+  <section class="hero">
+    <h1 class="page_title">SCENE</h1>
+    <h2 class="situation_title">脱獄する時に使える英会話</h2>
+    <div class="inner">
+      <div class="thum">
+        <%= image_tag "top/situation_thum_1.png" %>
+      </div>
+      <div class="txts">
+        <h3 class="title txt">あらすじ</h3>
+        <p class="txt">
+          <%= @situation.scenario %>
+        </p>
+        <a class="button" href="<%= url_for(step_path(@step)) %>">
+          NEXT
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>

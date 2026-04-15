@@ -1,0 +1,22 @@
+@function setvw($values, $base) {
+  $result: ();
+
+  @each $v in $values {
+    @if type-of($v) != string {
+      $calc: round(($v / $base) * 100 * 100) / 100;
+      $result: append($result, $calc * 1vw);
+    } @else {
+      $result: append($result, $v);
+    }
+  }
+
+  @return $result;
+}
+
+@function vw($values) {
+  @return setvw($values, 767);
+}
+
+@function pcvw($values) {
+  @return setvw($values, 1366);
+}

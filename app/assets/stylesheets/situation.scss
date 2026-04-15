@@ -1,0 +1,70 @@
+@import '_config/index';
+
+.situation {
+  @include pc {
+    padding-top: 60px;
+    padding-bottom: 180px;
+    @include liquid {
+      padding-top: pcvw(60);
+      padding-bottom: pcvw(180);
+    }
+  }
+  .page_title {
+    font-weight: bold;
+    text-align: center;
+    @include pc {
+      font-size: 56px;
+      @include liquid {
+        font-size: pcvw(56);
+      }
+    }
+  }
+  .situation_title {
+    font-weight: bold;
+    text-align: center;
+    @include pc {
+      font-size: 32px;
+      margin-top: 20px;
+      @include liquid {
+        font-size: pcvw(32);
+        margin-top: pcvw(20);
+      }
+    }
+  }
+  &.show {
+    .inner {
+      display: flex;
+      @include pc {
+        padding-top: 80px;
+        @include liquid {
+          padding-top: pcvw(80);
+        }
+      }
+      .thum {
+        flex-shrink: 0;
+        @include pc {
+          width: 308px;
+          @include liquid {
+            width: pcvw(308);
+          }
+        }
+      }
+      .txts {
+        width: 100%;
+        position: relative;
+        @include pc {
+          margin-left: 40px;
+          @include liquid {
+            margin-left: pcvw(40);
+          }
+        }
+        .button {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
