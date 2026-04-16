@@ -67,4 +67,42 @@
       }
     }
   }
+  &.result {
+    .result_title {
+      text-align: center;
+      @include pc {
+        margin-top: 80px;
+        @include liquid {
+          margin-top: pcvw(80);
+        }
+      }
+    }
+    .txts {
+      @include pc {
+        margin-top: 40px;
+        @include liquid {
+          margin-top: pcvw(40);
+        }
+      }
+      .ending {
+        text-align: center;
+        @include pc {
+          margin-top: 40px;
+          @include liquid {
+            margin-top: pcvw(40);
+          }
+        }
+      }
+    }
+    .button {
+      margin-right: auto;
+      margin-left: auto;
+      @include pc {
+        margin-top: 40px;
+        @include liquid {
+          margin-top: pcvw(40);
+        }
+      }
+    }
+  }
 }

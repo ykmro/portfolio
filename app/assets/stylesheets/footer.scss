@@ -1,0 +1,15 @@
+@import '_config/index';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  text-align: center;
+  @include pc {
+    height: 60px;
+    @include liquid {
+      height: pcvw(60);
+    }
+  }
+}
