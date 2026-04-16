@@ -126,27 +126,29 @@ img {
     &:has(input:checked) {
       opacity: .5;
     }
-    &::after {
-      content: "";
-      background-image: image-url("situation/icon_arrow.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      position: absolute;
-      top: 55%;
-      transform: translateY(-50%);
-      @include pc {
-        width: 20px;
-        height: 20px;
-        right: 20px;
-        @include liquid {
-          width: pcvw(20);
-          height: pcvw(20);
-          right: pcvw(20);
+    &:not(.disabled) {
+      &::after {
+        content: "";
+        background-image: image-url("situation/icon_arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        @include pc {
+          width: 20px;
+          height: 20px;
+          right: 20px;
+          @include liquid {
+            width: pcvw(20);
+            height: pcvw(20);
+            right: pcvw(20);
+          }
         }
       }
     }
-    label {
+    label, .label {
       display: block;
       @include pc {
         padding: 10px 20px;

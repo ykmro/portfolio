@@ -1,11 +1,29 @@
-<h1>Steps#result</h1>
-<p>Find me in app/views/steps/result.html.erb</p>
-<p>
-  <%= @choice.feedback %>
-</p>
-<% if @next_step %>
-  <%= link_to "Link", step_path(@next_step) %>
-<% else %>
-  <%= link_to "Link", result_situation_path(id: @step.situation_id) %>
+<% content_for :head do %>
+  <%= javascript_include_tag("pages/top") %>
 <% end %>
+<main class="situation show container">
+  <section class="hero">
+    <h1 class="page_title">SCENE</h1>
+    <h2 class="situation_title">脱獄する時に使える英会話</h2>
+    <div class="inner">
+      <div class="thum">
+        <%= image_tag "top/situation_thum_1.png" %>
+      </div>
+      <div class="txts">
+        <p class="txt">
+          <%= @choice.feedback %>
+        </p>
+        <% if @next_step %>
+          <a class="button" href="<%= step_path(@next_step) %>">
+            次の問題へ
+          </a>
+        <% else %>
+          <a class="button" href="<%= result_situation_path(@step.situation_id) %>">
+            結果を見る
+          </a>
+        <% end %>
+      </div>
 
+    </div>
+  </section>
+</main>

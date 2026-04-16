@@ -1,13 +1,27 @@
-<h1>Situations#result</h1>
-<p>Find me in app/views/situations/result.html.erb</p>
-<ul>
-  <% @choices.each do |choice| %>
-    <li>
-      <div class="modal">
-        <%= choice.body %>
-        <%= choice.feedback %>
+<% content_for :head do %>
+  <%= javascript_include_tag("pages/top") %>
+<% end %>
+<main class="situation show container">
+  <section class="hero">
+    <h1 class="page_title">SCENE</h1>
+    <h2 class="situation_title">脱獄する時に使える英会話</h2>
+    <div class="inner">
+      <div class="thum">
+        <%= image_tag "top/situation_thum_1.png" %>
       </div>
-    </li>
-  <% end %>
-</ul>
-<%= link_to "TOPへ戻る", root_path %>
+      <div class="txts">
+        <% @choices.each do |choice| %>
+          <div class="button_choice txt disabled">
+            <span class="label">
+              <%= choice.body %>
+            </span>
+          </div>
+        <% end %>
+        <a class="button" href="/">
+          TOPへ戻る
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>
