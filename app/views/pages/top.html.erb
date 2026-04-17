@@ -3,7 +3,7 @@
 <% end %>
 <main class="top container">
   <section class="hero">
-    <h２ class="title">役に立たない。<br>でも、忘れない。</h２>
+    <h2 class="title">役に立たない。<br>でも、忘れない。</h2>
     <p class="txt">
       新感覚エクストリーム英語学習アプリ。<br>
       一生訪れないかもしれない極限の状況で<br>
@@ -11,7 +11,7 @@
     </p>
   </section>
   <section class="about">
-    <h２ class="title">ABOUT <span>WHATIF?</span></h２>
+    <h2 class="title">ABOUT <span>WHATIF?</span></h2>
     <p class="txt">
       実用的なビジネス英会話より、映画のふとしたフレーズが頭に残る。<br>
       それはきっと情景とともにあなたの脳に記憶されているから。<br>
@@ -21,6 +21,7 @@
     </p>
   </section>
   <section class="scenes">
+    <h2 class="title">SCENES</h2>
     <ul class="situations">
       <% @situations.each_with_index do |situation, index| %>
         <li class="situation">
@@ -30,13 +31,29 @@
               </a>
           </div>
           <div class="modal">
-            <%= situation.title %>
-            <%= situation.overview %>
-            <%= situation.scenario %>
-            <%= link_to "Link", situation_path(situation) %>
+            <div class="inner">
+              <div class="thum">
+                <%= image_tag "top/situation_thum_#{index + 1}.png" %>
+              </div>
+              <div class="txts">
+                <h3 class="title">
+                  <%= situation.title %>
+                </h3>
+                <p class="txt overview">
+                  <%= situation.overview %>
+                </p>
+                <p class="txt scenario">
+                  <%= situation.scenario %>
+                </p>
+                <a class="button" href="<%= url_for(situation_path(situation)) %>">
+                  NEXT
+                </a>
+              </div>
+            </div>
           </div>
         </li>
       <% end %>
     </ul>
   </section>
+  <span class="overlay"></span>
 </main>
