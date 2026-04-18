@@ -20,5 +20,8 @@ COPY . .
 
 RUN RAILS_ENV=production SECRET_KEY_BASE=placeholder bundle exec rails assets:precompile
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 3000
-CMD ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]
+CMD ["/entrypoint.sh"]
