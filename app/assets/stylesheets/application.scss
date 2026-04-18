@@ -22,6 +22,11 @@ body {
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   position: relative;
+  &.is-darkened {
+    &::after {
+      filter: brightness(0.6);
+    }
+  }
   &::after {
     content: "";
     display: block;
@@ -35,6 +40,7 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
+    transition: filter .6s ease;
     z-index: -1;
   }
 }
@@ -49,6 +55,9 @@ body {
   z-index: 0;
   background: rgba(0,0,0,.5);
   transition: opacity .6s;
+  &.is-active {
+    display: block;
+  }
 }
 
 .modal {

@@ -1,4 +1,16 @@
 document.addEventListener('turbo:load', () => {
+  const nextButton = document.querySelector('.situation.show .button[href]');
+  if (nextButton) {
+    nextButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = nextButton.getAttribute('href');
+      document.body.classList.add('is-darkened');
+      setTimeout(() => {
+        Turbo.visit(href);
+      }, 500);
+    });
+  }
+
   document.querySelectorAll('#choice_form input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', () => {
       document.getElementById('choice_form').requestSubmit();
@@ -20,11 +32,11 @@ document.addEventListener('turbo:load', () => {
   };
 
   document.querySelectorAll('.situation').forEach(situation => {
-    situation.querySelector('.thum.js-modal-open').addEventListener('click', () => {
+    situation.querySelector('.thum.js-modal-open')?.addEventListener('click', () => {
       openModal(situation);
     });
-    situation.querySelector('.js-modal-close').addEventListener('click', closeAll);
+    situation.querySelector('.js-modal-close')?.addEventListener('click', closeAll);
   });
 
-  overlay.addEventListener('click', closeAll);
+  overlay?.addEventListener('click', closeAll);
 });

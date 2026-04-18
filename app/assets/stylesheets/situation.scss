@@ -46,15 +46,15 @@
     text-align: center;
     @include pc {
       font-size: 32px;
-      margin-top: 10px;
+      margin-top: 80px;
       @include liquid {
         font-size: pcvw(32);
-        margin-top: pcvw(10);
+        margin-top: pcvw(80);
       }
     }
     @include sp {
       font-size: vw(32);
-      margin-top: vw(10);
+      margin-top: vw(80);
     }
   }
   &.show {
