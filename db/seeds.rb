@@ -5,7 +5,7 @@ Situation.destroy_all
     title: "タイトル#{j + 1}",
     overview: "概要#{j + 1}",
     scenario: "シナリオ#{j + 1}",
-    thumbnail: ""
+    thumbnail: "top/situation_thum_#{j + 1}.png"
   )
 
   3.times do |i|
