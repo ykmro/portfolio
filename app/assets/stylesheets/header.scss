@@ -9,12 +9,18 @@
       height: pcvw(100);
     }
   }
+  @include sp {
+    height: vw(120);
+  }
   .logo {
     @include pc {
       width: 148px;
       @include liquid {
         width: pcvw(148);
       }
+    }
+    @include sp {
+      width: vw(148);
     }
   }
 }

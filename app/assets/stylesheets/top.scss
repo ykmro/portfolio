@@ -9,6 +9,10 @@
       padding-bottom: pcvw(60);
     }
   }
+  @include sp {
+    padding-top: vw(40);
+    padding-bottom: vw(40);
+  }
   .hero {
     .title {
       @include pc {
@@ -16,6 +20,9 @@
         @include liquid {
           font-size: pcvw(56);
         }
+      }
+      @include sp {
+        font-size: vw(56);
       }
     }
   }
@@ -28,6 +35,9 @@
         @include liquid {
           font-size: pcvw(56);
         }
+      }
+      @include sp {
+        font-size: vw(56);
       }
       span {
         color: #FF3B30;
@@ -43,12 +53,20 @@
         margin-top: pcvw(180);
       }
     }
+    @include sp {
+      margin-top: vw(60);
+    }
     > .title {
       display: inline-block;
     }
     .txt {
       display: inline-block;
-      line-height: 2.4;
+      @include pc {
+        line-height: 2.4;
+      }
+      @include sp {
+        line-height: 2;
+      }
     }
   }
   .scenes {
@@ -57,6 +75,9 @@
       @include liquid {
         margin-top: pcvw(80);
       }
+    }
+    @include sp {
+      margin-top: vw(48);
     }
     .situations {
       display: flex;
@@ -70,6 +91,9 @@
             @include liquid {
               margin-left: pcvw(20);
             }
+          }
+          @include sp {
+            margin-left: vw(10);
           }
         }
         > .thum {
@@ -95,6 +119,13 @@
               border-radius: pcvw(10);
             }
           }
+          @include sp {
+            width: 90vw;
+            border-radius: vw(10);
+            min-height: 85vh;
+            max-height: 85vh;
+            overflow-y: auto;
+          }
           .modal-close {
             position: absolute;
             top: 10px;
@@ -111,9 +142,17 @@
                 font-size: pcvw(40);
               }
             }
+            @include sp {
+              font-size: vw(80);
+            }
           }
           .inner {
             display: flex;
+            @include sp {
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
           }
           .txts {
             @include pc {
@@ -121,6 +160,9 @@
               @include liquid {
                 padding: pcvw(20);
               }
+            }
+            @include sp {
+              padding: vw(20);
             }
           }
           .thum {
@@ -130,6 +172,19 @@
               width: 285px;
               @include liquid {
                 width: pcvw(285);
+              }
+            }
+            @include sp {
+              width: 100%;
+              overflow: hidden;
+            }
+            img {
+              @include sp {
+                width: 100%;
+                height: vw(400);
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%) brightness(0.7) contrast(1.1);
               }
             }
             &::after {
@@ -142,6 +197,22 @@
               background: linear-gradient(to right, transparent, #161616);
               pointer-events: none;
               z-index: 1;
+              @include sp {
+                display: none;
+              }
+            }
+            &::before {
+              @include sp {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 60%;
+                background: linear-gradient(to bottom, transparent, #161616);
+                pointer-events: none;
+                z-index: 1;
+              }
             }
           }
           .title {
@@ -151,6 +222,9 @@
                 font-size: pcvw(36);
               }
             }
+            @include sp {
+              font-size: vw(36);
+            }
           }
           .button {
             @include pc {
@@ -158,6 +232,11 @@
               @include liquid {
                 margin-top: pcvw(40);
               }
+            }
+            @include sp {
+              margin-top: vw(24);
+              margin-right: auto;
+              margin-left: auto;
             }
           }
         }

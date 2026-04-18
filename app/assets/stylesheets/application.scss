@@ -74,6 +74,11 @@ img {
       padding-left: pcvw(40);
     }
   }
+  @include sp {
+    width: 100%;
+    padding-right: vw(40);
+    padding-left: vw(40);
+  }
 }
 
 .title {
@@ -89,6 +94,18 @@ img {
         margin-top: pcvw(20);
       }
     }
+    @include sp {
+      margin-top: vw(16);
+    }
+  }
+}
+
+.forSP {
+  @include pc {
+    display: none;
+  }
+  @include sp {
+    display: block;
   }
 }
 
@@ -99,6 +116,9 @@ img {
     @include liquid {
       font-size: pcvw(24);
     }
+  }
+  @include sp {
+    font-size: vw(24);
   }
 }
 
@@ -120,6 +140,12 @@ img {
       font-size: pcvw(24);
     }
   }
+  @include sp {
+    width: vw(200);
+    height: vw(52);
+    border-radius: vw(52);
+    font-size: 15px;
+  }
   &_choice {
     border: 1px solid #fff;
     color: #fff;
@@ -131,13 +157,18 @@ img {
         border-radius: pcvw(60);
       }
     }
+    @include sp {
+      border-radius: vw(52);
+    }
     &:nth-child(n+2) {
       @include pc {
         margin-top: 20px;
         @include liquid {
           margin-top: pcvw(20);
-
         }
+      }
+      @include sp {
+        margin-top: vw(16);
       }
     }
     &:has(input:checked) {
@@ -163,6 +194,11 @@ img {
             right: pcvw(20);
           }
         }
+        @include sp {
+          width: vw(16);
+          height: vw(16);
+          right: vw(16);
+        }
       }
     }
     label, .label {
@@ -173,7 +209,9 @@ img {
           padding: pcvw(10 20);
         }
       }
-
+      @include sp {
+        padding: vw(14) vw(20);
+      }
     }
     input {
       display: block;

@@ -12,4 +12,8 @@
       height: pcvw(60);
     }
   }
+  @include sp {
+    height: vw(50);
+    font-size: vw(16);
+  }
 }

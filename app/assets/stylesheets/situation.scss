@@ -9,6 +9,10 @@
       padding-bottom: pcvw(180);
     }
   }
+  @include sp {
+    padding-top: vw(40);
+    padding-bottom: vw(80);
+  }
   .page_title {
     font-weight: bold;
     text-align: center;
@@ -17,6 +21,9 @@
       @include liquid {
         font-size: pcvw(56);
       }
+    }
+    @include sp {
+      font-size: vw(56);
     }
   }
   .situation_title {
@@ -30,6 +37,10 @@
         margin-top: pcvw(20);
       }
     }
+    @include sp {
+      font-size: vw(32);
+      margin-top: vw(20);
+    }
   }
   &.show {
     .inner {
@@ -40,13 +51,21 @@
           padding-top: pcvw(80);
         }
       }
+      @include sp {
+        flex-direction: column;
+        padding-top: vw(80);
+      }
       .thum {
+        margin: 0 auto;
         flex-shrink: 0;
         @include pc {
           width: 308px;
           @include liquid {
             width: pcvw(308);
           }
+        }
+        @include sp {
+          width: 40%;
         }
       }
       .txts {
@@ -58,11 +77,20 @@
             margin-left: pcvw(40);
           }
         }
+        @include sp {
+          text-align: center;
+          margin-top: vw(40);
+        }
         .button {
           position: absolute;
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
+          @include sp {
+            position: static;
+            transform: none;
+            margin: vw(40) auto 0;
+          }
         }
       }
     }
@@ -76,6 +104,9 @@
           margin-top: pcvw(80);
         }
       }
+      @include sp {
+        margin-top: vw(80);
+      }
     }
     .txts {
       @include pc {
@@ -84,6 +115,9 @@
           margin-top: pcvw(40);
         }
       }
+      @include sp {
+        margin-top: vw(40);
+      }
       .ending {
         text-align: center;
         @include pc {
@@ -91,6 +125,9 @@
           @include liquid {
             margin-top: pcvw(40);
           }
+        }
+        @include sp {
+          margin-top: vw(40);
         }
       }
     }
@@ -102,6 +139,9 @@
         @include liquid {
           margin-top: pcvw(40);
         }
+      }
+      @include sp {
+        margin-top: vw(40);
       }
     }
   }
