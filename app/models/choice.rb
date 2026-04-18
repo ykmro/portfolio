@@ -3,5 +3,5 @@ class Choice < ApplicationRecord
 
   validates :body,     presence: true
   validates :feedback, presence: true
-  validates :is_correct,  inclusion: { in: [true, false] }
+  validates :is_correct,  inclusion: { in: [ true, false ] }
 end
