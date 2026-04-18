@@ -204,7 +204,7 @@ step4.choices.create!([
   {
     body: 'Go! Get out of here while you can!',
     is_correct: true,
-    feedback: '「今のうちに早く逃げろ！」"while you can" が「今のうちに・できる間に」という切迫感を完璧に表します。"Go!" で始めることで反射的・命令的な緊張感が一気に出ます。自己犠牲の重さが、この短い一言に凝縮されています。'
+    feedback: '「今のうちに早く逃げろ！」<br>"while you can" が「今のうちに・できる間に」という切迫感を完璧に表します。"Go!" で始めることで反射的・命令的な緊張感が一気に出ます。自己犠牲の重さが、この短い一言に凝縮されています。'
   },
   {
     body: 'Please run away now. This is your chance to escape.',
@@ -214,7 +214,7 @@ step4.choices.create!([
   {
     body: 'Get to the chopper!!',
     is_correct: false,
-    feedback: '「ヘリに乗れ！！」<br>映画『プレデター』でシュワルツェネッガーが脱出シーンで絶叫したセリフです。気持ちはまったく同じです。ただしヘリがありません。'
+    feedback: '「ヘリに乗れ！！」<br>映画『プレデター』でシュワルツェネッガーが脱出シーンで絶叫したセリフです。気持ちはまったく同じです。ただし、残念ながらヘリがありません。'
   }
 ])
 
@@ -268,12 +268,12 @@ step2.choices.create!([
   {
     body: 'A last-chance mission has been launched.',
     is_correct: false,
-    feedback: '「最後のチャンスとなるミッションが始動しました。」"last-resort" との違いは微妙ですが、"last-chance" は「チャンスがこれ一つ残っている」という希望寄りのニュアンスです。"last-resort" が「もう他に手がない」という追い詰められた状況を示すのに対し、"last-chance" はやや楽観的に聞こえます。報道の言葉としては深刻さが少し足りません。'
+    feedback: '「最後のチャンスとなるミッションが始動しました。」<br>"last-resort" との違いは微妙ですが、"last-chance" は「チャンスがこれ一つ残っている」という希望寄りのニュアンスです。"last-resort" が「もう他に手がない」という追い詰められた状況を示すのに対し、"last-chance" はやや楽観的に聞こえます。報道の言葉としては深刻さが少し足りません。'
   },
   {
     body: 'The forecast calls for a slight chance of asteroids.',
     is_correct: false,
-    feedback: '天気予報のフォーマットで隕石を伝えるという荒技です。「隕石がわずかに降る見込みです。」<br>"calls for" は天気予報で「〜の見込み」を表す定番表現。"slight chance" がまったく "slight" ではありません。このキャスターの平常心は人類の鑑です。'
+    feedback: '「隕石がわずかに降る見込みです。」<br>天気予報のフォーマットで隕石を伝えるという荒技です。"calls for" は天気予報で「〜の見込み」を表す定番表現。"slight chance" がまったく "slight" ではありません。このキャスターの平常心は人類の鑑です。'
   }
 ])
 
@@ -292,7 +292,7 @@ step3.choices.create!([
   {
     body: 'I \'ll run for it.',
     is_correct: false,
-    feedback: '「やってみます。」"run for ~" は「〜に立候補する・〜を目指して走る」という表現です。"run for president"（大統領選に出馬する）のように、選挙や競争の文脈で使われることが多く、宇宙ミッションへの志願としては少しズレたニュアンスになります。'
+    feedback: '「やってみます。」<br>"run for ~" は「〜に立候補する・〜を目指して走る」という表現です。"run for president"（大統領選に出馬する）のように、選挙や競争の文脈で使われることが多く、宇宙ミッションへの志願としては少しズレたニュアンスになります。'
   },
   {
     body: "The buck stops here.",
@@ -321,7 +321,7 @@ step4.choices.create!([
   {
     body: 'To infinity and beyond.',
     is_correct: false,
-    feedback: '「無限の彼方へ、さあ行くぞ。」<br>映画『トイ・ストーリー』でバズ・ライトイヤーの決め台詞です。宇宙へ飛び立つ文脈でこれ以上ハマるセリフはなく、むしろ正解に近い。'
+    feedback: '「無限の彼方へ、さあ行くぞ。」<br>映画『トイ・ストーリー』でバズ・ライトイヤーの決め台詞です。宇宙へ飛び立つ文脈でこれ以上ハマるセリフはなく、むしろ適切かもしれません。'
   }
 ])
 

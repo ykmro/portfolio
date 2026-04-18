@@ -4,14 +4,15 @@
 <main class="situation show container">
   <section class="hero">
     <h1 class="page_title">SCENE</h1>
-    <h2 class="situation_title">脱獄する時に使える英会話</h2>
+    <h2 class="situation_title"><%= @step.situation.title %></h2>
     <div class="inner">
       <div class="thum">
         <%= image_tag @step.situation.thumbnail %>
       </div>
       <div class="txts">
+        <p class="txt bold"><%= @choice.body %></p>
         <p class="txt">
-          <%= @choice.feedback %>
+          <%= sanitize @choice.feedback, tags: ['br'] %>
         </p>
         <% if @next_step %>
           <a class="button" href="<%= step_path(@next_step) %>">

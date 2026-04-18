@@ -168,6 +168,7 @@ img {
   justify-content: center;
   background-color: #FF3B30;
   color: #fff;
+  transition: opacity .6s;
   white-space: nowrap;
   @include pc {
     width: 240px;
@@ -179,6 +180,9 @@ img {
       height: pcvw(60);
       border-radius: pcvw(60);
       font-size: pcvw(24);
+    }
+    &:hover {
+      opacity: .6;
     }
   }
   @include sp {
@@ -196,6 +200,9 @@ img {
       border-radius: 60px;
       @include liquid {
         border-radius: pcvw(60);
+      }
+      &:hover {
+        opacity: .6;
       }
     }
     @include sp {
@@ -258,6 +265,7 @@ img {
     }
     label, .label {
       display: block;
+      cursor: pointer;
       @include pc {
         padding: 10px 20px;
         @include liquid {
@@ -272,4 +280,8 @@ img {
       display: block;
     }
   }
+}
+
+.bold {
+  font-weight: bold;
 }
