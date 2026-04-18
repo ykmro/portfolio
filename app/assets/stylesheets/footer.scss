@@ -1,19 +1,48 @@
 @import '_config/index';
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #000;
   text-align: center;
   @include pc {
-    height: 60px;
+    padding: 20px 40px ;
     @include liquid {
-      height: pcvw(60);
+      padding: pcvw(20) pcvw(40);
     }
   }
   @include sp {
-    height: vw(50);
     font-size: vw(16);
+    padding: vw(40);
+  }
+
+  .terms_link {
+    display: inline-block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    text-decoration: underline;
+    @include pc {
+      font-size: 14px;
+      @include liquid {
+        font-size: pcvw(14);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @include sp {
+      font-size: vw(14);
+    }
+  }
+  .copyright {
+    display: block;
+    @include pc {
+      margin-top: 20px;
+      @include liquid {
+        margin-top: pcvw(20);
+      }
+    }
+    @include sp {
+      margin-top: vw(20);
+    }
   }
 }

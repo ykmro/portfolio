@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
     @situations = Situation.all
   end
+
+  def terms
+  end
 end

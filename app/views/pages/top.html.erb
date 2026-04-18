@@ -23,6 +23,9 @@
   </section>
   <section class="scenes">
     <h2 class="title">SCENES</h2>
+    <p class="txt">
+      好きなシーンを選んでください。
+    </p>
     <ul class="situations">
       <% @situations.each_with_index do |situation, index| %>
         <li class="situation">
@@ -42,11 +45,8 @@
                 <p class="txt overview">
                   <%= situation.overview %>
                 </p>
-                <p class="txt scenario">
-                  <%= situation.scenario %>
-                </p>
                 <a class="button" href="<%= url_for(situation_path(situation)) %>">
-                  NEXT
+                  あらすじを見る
                 </a>
               </div>
             </div>

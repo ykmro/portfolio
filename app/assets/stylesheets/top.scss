@@ -79,6 +79,11 @@
     @include sp {
       margin-top: vw(48);
     }
+    >.title {
+      +.txt {
+        text-align: center;
+      }
+    }
     .situations {
       display: flex;
       align-items: center;

@@ -14,5 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "terms", to: "pages#terms", as: :terms
+
   get "up" => "rails/health#show", as: :rails_health_check
 end
