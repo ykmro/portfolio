@@ -18,6 +18,7 @@ RUN bundle install
 
 COPY . .
 
+RUN RAILS_ENV=production SECRET_KEY_BASE=placeholder bundle exec rails assets:precompile
+
 EXPOSE 3000
-# CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"]
-CMD ["bash", "-c", "RAILS_ENV=production bundle exec rails assets:precompile && bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"]
+CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"]
