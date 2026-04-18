@@ -107,7 +107,7 @@
           @include pc {
             transition: filter .6s;
             &:hover {
-              filter: blur(2px);
+              filter: blur(2px) brightness(.6);
               img {
                 transform: scale(1.1);
               }
@@ -154,7 +154,6 @@
           @include sp {
             width: 90vw;
             border-radius: vw(10);
-            min-height: 85vh;
             max-height: 85vh;
             overflow-y: auto;
           }
@@ -188,13 +187,13 @@
           }
           .txts {
             @include pc {
-              padding: 20px;
+              padding: 40px 40px 20px 20px;
               @include liquid {
-                padding: pcvw(20);
+                padding: pcvw(40 40 20 20);
               }
             }
             @include sp {
-              padding: vw(20);
+              padding: vw(40);
             }
           }
           .thum {
@@ -260,8 +259,12 @@
           }
           .button {
             @include pc {
+              height: 40px;
+              font-size: 16px;
               margin-top: 40px;
               @include liquid {
+                height: pcvw(40);
+                font-size: pcvw(16);
                 margin-top: pcvw(40);
               }
             }

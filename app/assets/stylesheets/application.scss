@@ -168,6 +168,7 @@ img {
   justify-content: center;
   background-color: #FF3B30;
   color: #fff;
+  white-space: nowrap;
   @include pc {
     width: 240px;
     height: 60px;
@@ -182,9 +183,9 @@ img {
   }
   @include sp {
     width: vw(200);
-    height: vw(52);
+    height: vw(60);
     border-radius: vw(52);
-    font-size: 15px;
+    font-size: vw(24);
   }
   &_choice {
     border: 1px solid #fff;

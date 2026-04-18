@@ -30,13 +30,13 @@
       <% @situations.each_with_index do |situation, index| %>
         <li class="situation">
           <div class="thum js-modal-open">
-            <%= image_tag "top/situation_thum_#{index + 1}.png" %>
+            <%= image_tag situation.thumbnail %>
           </div>
           <div class="modal">
             <button class="modal-close js-modal-close" aria-label="閉じる">&times;</button>
             <div class="inner">
               <div class="thum">
-                <%= image_tag "top/situation_thum_#{index + 1}.png" %>
+                <%= image_tag situation.thumbnail %>
               </div>
               <div class="txts">
                 <h3 class="title">
