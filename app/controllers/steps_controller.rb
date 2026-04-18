@@ -2,6 +2,7 @@ class StepsController < ApplicationController
   def show
     @step = Step.find(params[:id])
     @choices = @step.choices
+    @total_steps = Step.where(situation_id: @step.situation_id).count
   end
 
   def next

@@ -42,6 +42,21 @@
       margin-top: vw(20);
     }
   }
+  .step_progress {
+    text-align: center;
+    @include pc {
+      font-size: 32px;
+      margin-top: 10px;
+      @include liquid {
+        font-size: pcvw(32);
+        margin-top: pcvw(10);
+      }
+    }
+    @include sp {
+      font-size: vw(32);
+      margin-top: vw(10);
+    }
+  }
   &.show {
     .inner {
       display: flex;
@@ -53,7 +68,7 @@
       }
       @include sp {
         flex-direction: column;
-        padding-top: vw(80);
+        padding-top: vw(40);
       }
       .thum {
         margin: 0 auto;
