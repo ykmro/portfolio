@@ -15,8 +15,12 @@
   .logo {
     @include pc {
       width: 148px;
+      transition: opacity .6s;
       @include liquid {
         width: pcvw(148);
+      }
+      &:hover {
+        opacity: .6;
       }
     }
     @include sp {

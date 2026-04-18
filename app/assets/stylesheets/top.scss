@@ -98,6 +98,29 @@
         }
         > .thum {
           cursor: pointer;
+          overflow: hidden;
+          @include pc {
+            transition: filter .6s;
+            &:hover {
+              filter: blur(2px);
+              img {
+                transform: scale(1.1);
+              }
+            }
+            img {
+              transition: transform .6s;
+            }
+          }
+        }
+        &.is-modal-open {
+          @include pc {
+            > .thum.js-modal-open {
+              filter: blur(2px);
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
         }
         .modal {
           opacity: 0;
