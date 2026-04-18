@@ -13,7 +13,19 @@ document.addEventListener('turbo:load', () => {
 
   document.querySelectorAll('#choice_form input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', () => {
-      document.getElementById('choice_form').requestSubmit();
+      const isCorrect = radio.dataset.correct === 'true';
+      const message = isCorrect ? 'Nice Choice!!' : 'Good!!';
+
+      const overlay = document.getElementById('answer-overlay');
+      if (overlay) {
+        overlay.querySelector('.answer-overlay__message').textContent = message;
+        overlay.classList.add('is-active');
+        setTimeout(() => {
+          document.getElementById('choice_form').requestSubmit();
+        }, 1500);
+      } else {
+        document.getElementById('choice_form').requestSubmit();
+      }
     });
   });
 

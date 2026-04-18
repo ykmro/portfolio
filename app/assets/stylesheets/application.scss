@@ -60,6 +60,37 @@ body {
   }
 }
 
+.answer-overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__message {
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    @include pc {
+      font-size: 56px;
+      @include liquid {
+        font-size: pcvw(56);
+      }
+    }
+    @include sp {
+      font-size: vw(56);
+    }
+  }
+}
+
 .modal {
   z-index: 1;
 }
