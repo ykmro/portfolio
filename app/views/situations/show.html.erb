@@ -12,7 +12,7 @@
       <div class="txts">
         <h3 class="title txt">あらすじ</h3>
         <p class="txt">
-          <%= @situation.scenario %>
+          <%= sanitize @situation.scenario, tags: ['br'] %>
         </p>
         <a class="button" href="<%= url_for(step_path(@step)) %>">
           START
