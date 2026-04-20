@@ -1,4 +1,4 @@
-class SeedInitialData < ActiveRecord::Migration[7.2]
+class SeedInitialData < ActiveRecord::Migration[7.0]
   def up
     Choice.destroy_all
     Step.destroy_all
