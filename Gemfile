@@ -8,7 +8,7 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.5.0"
+gem "pg", ">= 1.5"
 
 # Use the Puma web server [https://puma.io]
 gem "puma", ">= 5.0"
@@ -47,6 +47,4 @@ group :development do
   gem "web-console"
 end
 
-gem "dartsass-rails", "~> 0.4.0"
-
-gem "sassc"
+gem "tailwindcss-rails", "~> 2.0"

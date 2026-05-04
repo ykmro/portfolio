@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :maintenance_mode
+  # before_action :maintenance_mode
 
   private
 

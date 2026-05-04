@@ -1,29 +1,27 @@
 <% content_for :head do %>
   <%= javascript_include_tag("pages/top") %>
 <% end %>
-<main class="situation result container">
-  <section class="hero">
-    <h1 class="page_title">SCENE</h1>
-    <h2 class="situation_title">脱獄する時に使える英会話</h2>
-    <h3 class="result_title txt">あなたが選んだ選択肢</h3>
-    <div class="txts">
-      <% @choices.each do |choice| %>
-        <div class="button_choice txt disabled">
-          <span class="label">
-            <%= choice.body %>
-          </span>
-        </div>
-      <% end %>
-      <p class="txt ending">
-        お疲れ様でした！<br>
-        適切な回答を選ぶことができましたか？<br>
-        WHATIFでは今後、シナリオの拡充や学習記録の実装を<br>
-        検討していきます。<br>
-        ぜひまた遊んでみてくださいね！
-      </p>
-      <a class="button" href="/">
-        TOPへ戻る
-      </a>
-    </div>
-  </section>
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 text-center">
+  <p class="text-xs font-bold tracking-widest text-primary uppercase mb-4">COMPLETE</p>
+  <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">お疲れ様でした！</h1>
+
+  <p class="text-gray-600 leading-loose mb-12 text-sm sm:text-base">
+    適切な回答を選ぶことができましたか？<br>
+    WHATIFでは今後、シナリオの拡充や学習記録の実装を<br>
+    検討していきます。<br>
+    ぜひまた遊んでみてくださいね！
+  </p>
+
+  <h2 class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-5">あなたが選んだ選択肢</h2>
+  <div class="space-y-3 mb-12 text-left max-w-lg mx-auto">
+    <% @choices.each do |choice| %>
+      <div class="border border-gray-200 rounded-xl px-5 py-4 bg-gray-50">
+        <span class="text-gray-700 text-sm sm:text-base"><%= choice.body %></span>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "TOPへ戻る", root_path,
+        class: "inline-flex items-center justify-center bg-primary text-white font-bold rounded-full px-10 py-3 hover:opacity-80 transition-opacity duration-300" %>
 </main>

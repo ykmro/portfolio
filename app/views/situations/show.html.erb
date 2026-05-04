@@ -1,24 +1,28 @@
 <% content_for :head do %>
   <%= javascript_include_tag("pages/top") %>
 <% end %>
-<main class="situation show container">
-  <section class="hero">
-    <h1 class="page_title">SCENE</h1>
-    <h2 class="situation_title"><%= @situation.title %></h2>
-    <div class="inner">
-      <div class="thum">
-        <%= image_tag @situation.thumbnail %>
-      </div>
-      <div class="txts">
-        <h3 class="title txt">あらすじ</h3>
-        <p class="txt">
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+  <p class="text-center text-xs font-bold tracking-widest text-primary uppercase mb-2">SCENE</p>
+  <h1 class="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">
+    <%= @situation.title %>
+  </h1>
+
+  <div class="md:flex md:gap-8 items-start">
+    <div class="md:w-56 flex-shrink-0 mb-6 md:mb-0">
+      <%= image_tag @situation.thumbnail, class: "w-full rounded-xl shadow-sm", alt: @situation.title %>
+    </div>
+    <div class="flex-1">
+      <h2 class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-3">あらすじ</h2>
+      <div class="bg-gray-50 rounded-xl p-5 mb-8">
+        <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
           <%= sanitize @situation.scenario, tags: ['br'] %>
         </p>
-        <a class="button" href="<%= url_for(step_path(@step)) %>">
-          START
-        </a>
       </div>
-
+      <div class="text-center md:text-left">
+        <%= link_to "START", step_path(@step),
+              class: "inline-flex items-center justify-center bg-primary text-white font-bold rounded-full px-10 py-3 hover:opacity-80 transition-opacity duration-300" %>
+      </div>
     </div>
-  </section>
+  </div>
 </main>

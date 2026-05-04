@@ -1,36 +1,52 @@
 <% content_for :head do %>
   <%= javascript_include_tag("pages/top") %>
 <% end %>
-<main class="situation show container">
-  <section class="hero">
-    <h1 class="page_title">SCENE</h1>
-    <h2 class="situation_title"><%= @step.situation.title %></h2>
-    <div class="inner">
-      <div class="thum">
-        <%= image_tag @step.situation.thumbnail %>
-      </div>
-      <div class="txts">
-        <p class="txt">
-          <%= sanitize @step.body, tags: ['br'] %>
-        </p>
-        <%= form_with url: next_step_path(@step), id: "choice_form", method: :post do |f| %>
-          <% @choices.each do |choice| %>
-            <div class="button_choice txt">
-              <%= f.radio_button :choice_id, choice.id, data: { correct: choice.is_correct } %>
-              <%= f.label :choice_id, choice.body, value: choice.id %>
-              <button type="button" class="choice-speaker" data-text="<%= choice.body %>">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                </svg>
-              </button>
-            </div>
-          <% end %>
-        <% end %>
-        <div id="answer-overlay" class="answer-overlay">
-          <p class="answer-overlay__message"></p>
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+  <%# Scene context %>
+  <div class="bg-gray-50 rounded-xl p-5 mb-8">
+    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-1">SCENE</p>
+    <p class="text-sm font-bold text-gray-700"><%= @step.situation.title %></p>
+  </div>
+
+  <%# Question body %>
+  <div class="text-center mb-10 px-4">
+    <p class="text-xl sm:text-2xl font-bold text-gray-900 leading-relaxed">
+      <%= sanitize @step.body, tags: ['br'] %>
+    </p>
+  </div>
+
+  <%# Choices %>
+  <%= form_with url: next_step_path(@step), id: "choice_form", method: :post do |f| %>
+    <div class="space-y-3">
+      <% @choices.each do |choice| %>
+        <div class="relative flex items-center border border-gray-200 rounded-xl bg-white hover:border-gray-400 transition-colors cursor-pointer">
+          <%= f.radio_button :choice_id, choice.id,
+                class: "sr-only",
+                data: { correct: choice.is_correct } %>
+          <%= f.label :choice_id, choice.body,
+                value: choice.id,
+                class: "flex-1 py-4 pl-5 pr-12 cursor-pointer text-gray-800 font-medium text-sm sm:text-base" %>
+          <button type="button"
+                  class="choice-speaker absolute right-4 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-gray-700 transition-all duration-150"
+                  data-text="<%= choice.body %>"
+                  aria-label="読み上げ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+          </button>
         </div>
-      </div>
+      <% end %>
     </div>
-    <p class="step_progress txt"><%= @step.step_number %> / <%= @total_steps %></p>
-  </section>
+  <% end %>
+
+  <%# Progress %>
+  <p class="text-center text-gray-400 text-sm mt-8 font-medium">
+    <%= @step.step_number %> / <%= @total_steps %>
+  </p>
+
+  <%# Answer overlay %>
+  <div id="answer-overlay" class="answer-overlay">
+    <p class="answer-overlay__message"></p>
+  </div>
 </main>

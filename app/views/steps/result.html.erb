@@ -1,30 +1,35 @@
 <% content_for :head do %>
   <%= javascript_include_tag("pages/top") %>
 <% end %>
-<main class="situation show container">
-  <section class="hero">
-    <h1 class="page_title">SCENE</h1>
-    <h2 class="situation_title"><%= @step.situation.title %></h2>
-    <div class="inner">
-      <div class="thum">
-        <%= image_tag @step.situation.thumbnail %>
-      </div>
-      <div class="txts">
-        <p class="txt bold"><%= @choice.body %></p>
-        <p class="txt">
-          <%= sanitize @choice.feedback, tags: ['br'] %>
-        </p>
-        <% if @next_step %>
-          <a class="button" href="<%= step_path(@next_step) %>">
-            次の問題へ
-          </a>
-        <% else %>
-          <a class="button" href="<%= result_situation_path(@step.situation_id) %>">
-            選択結果を見る
-          </a>
-        <% end %>
-      </div>
 
-    </div>
-  </section>
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+  <%# Scene context %>
+  <div class="bg-gray-50 rounded-xl p-5 mb-8">
+    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-1">SCENE</p>
+    <p class="text-sm font-bold text-gray-700"><%= @step.situation.title %></p>
+  </div>
+
+  <%# Selected answer %>
+  <div class="border-l-4 border-primary pl-5 mb-6">
+    <p class="text-base sm:text-lg font-bold text-gray-900"><%= @choice.body %></p>
+  </div>
+
+  <%# Feedback %>
+  <div class="bg-gray-50 rounded-xl p-6 mb-10">
+    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-3">FEEDBACK</p>
+    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+      <%= sanitize @choice.feedback, tags: ['br'] %>
+    </p>
+  </div>
+
+  <%# Navigation %>
+  <div class="text-center">
+    <% if @next_step %>
+      <%= link_to "次の問題へ", step_path(@next_step),
+            class: "inline-flex items-center justify-center bg-primary text-white font-bold rounded-full px-10 py-3 hover:opacity-80 transition-opacity duration-300" %>
+    <% else %>
+      <%= link_to "選択結果を見る", result_situation_path(@step.situation_id),
+            class: "inline-flex items-center justify-center bg-primary text-white font-bold rounded-full px-10 py-3 hover:opacity-80 transition-opacity duration-300" %>
+    <% end %>
+  </div>
 </main>
