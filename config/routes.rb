@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [ :new, :create ]
 
-  resource :session, only: [ :new, :create, :destroy ]
+  get "login", to: "sessions#new", as: :login
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy", as: :logout
 
   resources :situations, only: [ :index, :show ] do
     member do
