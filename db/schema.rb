@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_09_003344) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_14_115034) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,19 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_09_003344) do
     t.index ["situation_id"], name: "index_steps_on_situation_id"
   end
 
+  create_table "study_logs", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "step_id"
+    t.bigint "word_choice_id"
+    t.integer "correct_count"
+    t.datetime "studied_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_study_logs_on_step_id"
+    t.index ["user_id"], name: "index_study_logs_on_user_id"
+    t.index ["word_choice_id"], name: "index_study_logs_on_word_choice_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email", null: false
@@ -51,6 +64,29 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_09_003344) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "word_choices", force: :cascade do |t|
+    t.bigint "word_id", null: false
+    t.integer "wrong_word_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "situation_id", null: false
+    t.index ["situation_id"], name: "index_word_choices_on_situation_id"
+    t.index ["word_id"], name: "index_word_choices_on_word_id"
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "choices", "steps"
   add_foreign_key "steps", "situations"
+  add_foreign_key "study_logs", "steps"
+  add_foreign_key "study_logs", "users"
+  add_foreign_key "study_logs", "word_choices"
+  add_foreign_key "word_choices", "situations"
+  add_foreign_key "word_choices", "words"
+  add_foreign_key "word_choices", "words", column: "wrong_word_id"
 end
