@@ -44,15 +44,14 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_14_115034) do
 
   create_table "study_logs", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "step_id"
-    t.bigint "word_choice_id"
+    t.string "loggable_type", null: false
+    t.bigint "loggable_id", null: false
     t.integer "correct_count"
     t.datetime "studied_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["step_id"], name: "index_study_logs_on_step_id"
+    t.index ["loggable_type", "loggable_id"], name: "index_study_logs_on_loggable"
     t.index ["user_id"], name: "index_study_logs_on_user_id"
-    t.index ["word_choice_id"], name: "index_study_logs_on_word_choice_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,9 +82,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_14_115034) do
 
   add_foreign_key "choices", "steps"
   add_foreign_key "steps", "situations"
-  add_foreign_key "study_logs", "steps"
   add_foreign_key "study_logs", "users"
-  add_foreign_key "study_logs", "word_choices"
   add_foreign_key "word_choices", "situations"
   add_foreign_key "word_choices", "words"
   add_foreign_key "word_choices", "words", column: "wrong_word_id"
