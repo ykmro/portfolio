@@ -1,0 +1,19 @@
+// media query mixin
+
+@mixin liquid {
+  @media (max-width: #{1366 - 1}px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

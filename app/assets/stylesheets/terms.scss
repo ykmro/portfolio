@@ -1,0 +1,138 @@
+@import '_config/index';
+
+.terms {
+  @include pc {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include liquid {
+      padding-top: pcvw(80);
+      padding-bottom: pcvw(80);
+    }
+  }
+  @include sp {
+    padding-top: vw(60);
+    padding-bottom: vw(60);
+  }
+
+  &__title {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    @include pc {
+      font-size: 36px;
+      padding-bottom: 24px;
+      margin-bottom: 48px;
+      @include liquid {
+        font-size: pcvw(36);
+        padding-bottom: pcvw(24);
+        margin-bottom: pcvw(48);
+      }
+    }
+    @include sp {
+      font-size: vw(32);
+      padding-bottom: vw(20);
+      margin-bottom: vw(40);
+    }
+  }
+
+  &__section {
+    @include pc {
+      margin-bottom: 48px;
+      @include liquid {
+        margin-bottom: pcvw(48);
+      }
+    }
+    @include sp {
+      margin-bottom: vw(40);
+    }
+  }
+
+  &__intro {
+    line-height: 1.8;
+    @include pc {
+      font-size: 18px;
+      @include liquid {
+        font-size: pcvw(18);
+      }
+    }
+    @include sp {
+      font-size: vw(22);
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    @include pc {
+      font-size: 22px;
+      margin-bottom: 16px;
+      @include liquid {
+        font-size: pcvw(22);
+        margin-bottom: pcvw(16);
+      }
+    }
+    @include sp {
+      font-size: vw(24);
+      margin-bottom: vw(12);
+    }
+  }
+
+  &__text {
+    line-height: 1.8;
+    @include pc {
+      font-size: 16px;
+      @include liquid {
+        font-size: pcvw(16);
+      }
+    }
+    @include sp {
+      font-size: vw(20);
+    }
+  }
+
+  &__list {
+    line-height: 1.8;
+    list-style: disc;
+    @include pc {
+      font-size: 16px;
+      padding-left: 24px;
+      margin-top: 12px;
+      @include liquid {
+        font-size: pcvw(16);
+        padding-left: pcvw(24);
+        margin-top: pcvw(12);
+      }
+    }
+    @include sp {
+      font-size: vw(20);
+      padding-left: vw(24);
+      margin-top: vw(10);
+    }
+
+    li + li {
+      @include pc {
+        margin-top: 8px;
+        @include liquid {
+          margin-top: pcvw(8);
+        }
+      }
+      @include sp {
+        margin-top: vw(8);
+      }
+    }
+  }
+
+  &__date {
+    color: rgba(255, 255, 255, 0.6);
+    @include pc {
+      font-size: 14px;
+      margin-bottom: 48px;
+      @include liquid {
+        font-size: pcvw(14);
+        margin-bottom: pcvw(48);
+      }
+    }
+    @include sp {
+      font-size: vw(18);
+      margin-bottom: vw(40);
+    }
+  }
+}
