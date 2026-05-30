@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
     <title>WHATIF?</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,7 +31,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-white text-gray-900 antialiased">
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white antialiased transition-colors duration-200">
     <%= render 'layouts/header' %>
     <%= yield %>
     <%= render 'layouts/footer' %>

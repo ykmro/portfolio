@@ -5,7 +5,7 @@
 <main>
   <% if flash[:notice] %>
     <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
-      <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 text-sm">
+      <div class="bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 text-green-800 dark:text-green-200 rounded-lg px-4 py-3 text-sm">
         <%= flash[:notice] %>
       </div>
     </div>
@@ -14,12 +14,12 @@
   <%# Hero section %>
 
   <%# About section %>
-  <section class="bg-gray-50 py-16">
+  <section class="bg-gray-50 dark:bg-gray-800 py-16 transition-colors duration-200">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
         ABOUT <span class="text-primary">WHATIF?</span>
       </h2>
-      <p class="text-base text-gray-600 leading-loose">
+      <p class="text-base text-gray-600 dark:text-gray-300 leading-loose">
         もし海外で急に熱が出たら...？空港で荷物が行方不明になったら...？<br>
         ホテルでベッドバグを発見したら...？<br>
         そんな<strong>ニッチなシチュエーション</strong>に特化した英語フレーズを学べるWEBアプリです。<br>
@@ -31,21 +31,21 @@
 
   <%# Scenes section %>
   <section class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-3">SCENES</h2>
-    <p class="text-center text-gray-500 mb-10">好きなシーンを選んでください。</p>
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-3">SCENES</h2>
+    <p class="text-center text-gray-500 dark:text-gray-400 mb-10">好きなシーンを選んでください。</p>
 
     <div class="grid grid-cols-2 gap-6">
       <% @situations.each do |situation| %>
         <%= link_to situation_path(situation),
-              class: "group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:scale-105 transition-all duration-300" do %>
-          <div class="aspect-video overflow-hidden bg-gray-100">
+              class: "group block bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:scale-105 transition-all duration-300" do %>
+          <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
             <%= image_tag situation.thumbnail, class: "w-full h-full object-cover", alt: situation.title %>
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-gray-900 text-sm mb-2 leading-snug">
+            <h3 class="font-bold text-gray-900 dark:text-white text-sm mb-2 leading-snug">
               <%= situation.title %>
             </h3>
-            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">
+            <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-3">
               <%= situation.overview %>
             </p>
           </div>

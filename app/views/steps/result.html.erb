@@ -4,20 +4,20 @@
 
 <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
   <%# Scene context %>
-  <div class="bg-gray-50 rounded-xl p-5 mb-8">
-    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-1">SCENE</p>
-    <p class="text-sm font-bold text-gray-700"><%= @step.situation.title %></p>
+  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 mb-8 transition-colors duration-200">
+    <p class="text-xs text-gray-400 dark:text-gray-500 font-bold tracking-widest uppercase mb-1">SCENE</p>
+    <p class="text-sm font-bold text-gray-700 dark:text-gray-300"><%= @step.situation.title %></p>
   </div>
 
   <%# Selected answer %>
   <div class="border-l-4 border-primary pl-5 mb-6">
-    <p class="text-base sm:text-lg font-bold text-gray-900"><%= @choice.body %></p>
+    <p class="text-base sm:text-lg font-bold text-gray-900 dark:text-white"><%= @choice.body %></p>
   </div>
 
   <%# Feedback %>
-  <div class="bg-gray-50 rounded-xl p-6 mb-10">
-    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-3">FEEDBACK</p>
-    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-10 transition-colors duration-200">
+    <p class="text-xs text-gray-400 dark:text-gray-500 font-bold tracking-widest uppercase mb-3">FEEDBACK</p>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
       <%= sanitize @choice.feedback, tags: ['br'] %>
     </p>
   </div>
