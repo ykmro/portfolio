@@ -1,0 +1,266 @@
+slug: "luggage"
+title: "空港で預け荷物を無くした時に使える英会話"
+overview: "空港で荷物が行方不明になったときに使える英会話を学びます。"
+scenario: "フライト後にバゲージクレームで待っていても荷物が出てきません。航空会社のスタッフに状況を説明し、荷物の特徴を伝えて捜索を依頼する必要があります。"
+thumbnail: "top/situation_thum_luggage.png"
+steps:
+  - step_number: 1
+    body: "「荷物・手荷物」を英語で言うと？"
+    choices:
+      - body: "luggage"
+        is_correct: true
+        feedback: |-
+          正解！「荷物・手荷物」は <b>luggage</b> です。"baggage" もほぼ同じ意味で使えます。空港では "checked luggage"（預け荷物）・"carry-on luggage"（機内持ち込み荷物）と区別します。
+      - body: "baggage"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物・手荷物」は <b>luggage</b> です。"baggage" も正しい表現ですが、今回は "luggage" を覚えましょう。
+      - body: "suitcase"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物・手荷物」は <b>luggage</b> です。"suitcase" はスーツケース本体を指す言葉で、荷物全般を指す "luggage" とは異なります。
+  - step_number: 2
+    body: "「荷物が届いていません」を英語で言うと？"
+    choices:
+      - body: "My luggage hasn't arrived."
+        is_correct: true
+        feedback: |-
+          正解！「荷物が届いていません」は <b>My luggage hasn't arrived.</b> です。現在完了の否定形で「（今の時点でまだ）届いていない」という状況を表します。空港スタッフへの第一声として最も自然な表現です。
+      - body: "I can't find my bag."
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物が届いていません」は <b>My luggage hasn't arrived.</b> です。
+      - body: "My suitcase is missing."
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物が届いていません」は <b>My luggage hasn't arrived.</b> です。
+  - step_number: 3
+    body: "「荷物が届いていません。」を英語で言うと？"
+    choices:
+      - body: "My luggage hasn't arrived."
+        is_correct: true
+        feedback: |-
+          正解！<br>現在完了の否定形 "hasn't arrived" は「（今まだ）届いていない」という継続的な未着を表します。バゲージクレームでスタッフに声をかける際の定番フレーズです。
+      - body: "My luggage didn't come out."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>My luggage hasn't arrived.</b> です。
+      - body: "I lost my luggage."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>My luggage hasn't arrived.</b> です。
+  - step_number: 4
+    body: "今回のフレーズをもう一度確認しましょう。<br>「荷物が届いていません。」"
+    choices:
+      - body: "My luggage hasn't arrived."
+        is_correct: true
+        feedback: |-
+          "hasn't arrived" は現在完了の否定形。「まだ届いていない」という状態を伝えます。"I lost my luggage." は「自分でなくした」というニュアンスになるので、航空会社の責任を伝えるには "haven't arrived" が適切です。
+  - step_number: 5
+    body: "「荷物引換証」を英語で言うと？"
+    choices:
+      - body: "baggage claim tag"
+        is_correct: true
+        feedback: |-
+          正解！「荷物引換証」は <b>baggage claim tag</b> です。チェックイン時に荷物に付けられ、半券が搭乗券に貼られる番号付きのタグのことです。
+      - body: "boarding pass"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物引換証」は <b>baggage claim tag</b> です。"boarding pass" は搭乗券のことです。
+      - body: "luggage receipt"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物引換証」は <b>baggage claim tag</b> です。
+  - step_number: 6
+    body: "「これが荷物引換証です」を英語で言うと？"
+    choices:
+      - body: "Here is my baggage claim tag."
+        is_correct: true
+        feedback: |-
+          正解！「これが荷物引換証です」は <b>Here is my baggage claim tag.</b> です。"Here is 〜" は物を差し出しながら「これが〜です」と示す表現です。書類やカードを提示する場面で広く使えます。
+      - body: "This is my tag for the baggage."
+        is_correct: false
+        feedback: |-
+          惜しい！「これが荷物引換証です」は <b>Here is my baggage claim tag.</b> です。
+      - body: "I have a claim tag here."
+        is_correct: false
+        feedback: |-
+          惜しい！「これが荷物引換証です」は <b>Here is my baggage claim tag.</b> です。
+  - step_number: 7
+    body: "「これが荷物引換証です。」を英語で言うと？"
+    choices:
+      - body: "Here is my baggage claim tag."
+        is_correct: true
+        feedback: |-
+          正解！<br>"Here is 〜" は物を手渡したり提示したりする際の自然な表現です。"Here is my passport."（パスポートです）のように、様々な書類の提示場面で使えます。
+      - body: "This is the tag from my luggage."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>Here is my baggage claim tag.</b> です。
+      - body: "I want to show you my claim tag."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>Here is my baggage claim tag.</b> です。
+  - step_number: 8
+    body: "今回のフレーズをもう一度確認しましょう。<br>「これが荷物引換証です。」"
+    choices:
+      - body: "Here is my baggage claim tag."
+        is_correct: true
+        feedback: |-
+          "Here is 〜" は物を提示する場面の定番表現。"Here is my ID."・"Here is my reservation number." のように応用できます。荷物紛失の申告時は必ずこのタグが必要になります。
+  - step_number: 9
+    body: "「スーツケース」を英語で言うと？"
+    choices:
+      - body: "suitcase"
+        is_correct: true
+        feedback: |-
+          正解！「スーツケース」は <b>suitcase</b> です。旅行用の硬い箱型の荷物を指します。"bag" より具体的に形状を伝えられます。
+      - body: "trunk"
+        is_correct: false
+        feedback: |-
+          惜しい！「スーツケース」は <b>suitcase</b> です。"trunk" は大型の木箱や車のトランクを指します。
+      - body: "backpack"
+        is_correct: false
+        feedback: |-
+          惜しい！「スーツケース」は <b>suitcase</b> です。"backpack" はリュックサックのことです。
+  - step_number: 10
+    body: "「赤いリボンのついた大きな黒いスーツケース」を英語で言うと？"
+    choices:
+      - body: "a large black suitcase with a red ribbon"
+        is_correct: true
+        feedback: |-
+          正解！「赤いリボンのついた大きな黒いスーツケース」は <b>a large black suitcase with a red ribbon</b> です。英語の形容詞の語順は「大きさ→色→名詞」が基本。目印を "with 〜" で後置します。
+      - body: "a black large suitcase with red ribbon"
+        is_correct: false
+        feedback: |-
+          惜しい！「赤いリボンのついた大きな黒いスーツケース」は <b>a large black suitcase with a red ribbon</b> です。形容詞の語順は「大きさ（large）→色（black）」の順が正しいです。
+      - body: "a big dark suitcase tied with red"
+        is_correct: false
+        feedback: |-
+          惜しい！「赤いリボンのついた大きな黒いスーツケース」は <b>a large black suitcase with a red ribbon</b> です。
+  - step_number: 11
+    body: "「私のバッグは赤いリボンのついた大きな黒いスーツケースです。」を英語で言うと？"
+    choices:
+      - body: "My bag is a large black suitcase with a red ribbon."
+        is_correct: true
+        feedback: |-
+          正解！<br>荷物の特徴を正確に伝えるほど早く見つけてもらえます。サイズ・色・目印の順で説明するのが伝わりやすいコツです。
+      - body: "I have a black big bag with red marks."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>My bag is a large black suitcase with a red ribbon.</b> です。
+      - body: "My suitcase is black and large with something red."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>My bag is a large black suitcase with a red ribbon.</b> です。
+  - step_number: 12
+    body: "今回のフレーズをもう一度確認しましょう。<br>「私のバッグは赤いリボンのついた大きな黒いスーツケースです。」"
+    choices:
+      - body: "My bag is a large black suitcase with a red ribbon."
+        is_correct: true
+        feedback: |-
+          英語の形容詞の順番は「大きさ → 色 → 名詞」が基本です。目印は "with 〜" で後ろに追加します。旅行前にスーツケースの特徴を英語で言えるよう練習しておくと安心です。
+  - step_number: 13
+    body: "「見つける・突き止める」を英語で言うと？"
+    choices:
+      - body: "locate"
+        is_correct: true
+        feedback: |-
+          正解！「見つける・突き止める」は <b>locate</b> です。単に "find" より「場所を特定して見つける」というニュアンスがあり、追跡・調査の文脈でよく使われます。
+      - body: "find"
+        is_correct: false
+        feedback: |-
+          惜しい！「見つける・突き止める」は <b>locate</b> です。"find" も使えますが、"locate" は「所在を突き止める」という意味でより正確に状況を伝えられます。
+      - body: "search"
+        is_correct: false
+        feedback: |-
+          惜しい！「見つける・突き止める」は <b>locate</b> です。"search" は「探す」という動作で、見つかるかどうかは含みません。
+  - step_number: 14
+    body: "「荷物を見つけるのにどのくらいかかりますか？」を英語で言うと？"
+    choices:
+      - body: "How long will it take to locate my bag?"
+        is_correct: true
+        feedback: |-
+          正解！「荷物を見つけるのにどのくらいかかりますか？」は <b>How long will it take to locate my bag?</b> です。"How long will it take to 〜?" は「〜するのにどのくらいかかりますか？」という所要時間を尋ねる定番構文です。
+      - body: "When will my bag be found?"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物を見つけるのにどのくらいかかりますか？」は <b>How long will it take to locate my bag?</b> です。
+      - body: "How much time do you need to find it?"
+        is_correct: false
+        feedback: |-
+          惜しい！「荷物を見つけるのにどのくらいかかりますか？」は <b>How long will it take to locate my bag?</b> です。
+  - step_number: 15
+    body: "「荷物を見つけるのにどのくらいかかりますか？」を英語で言うと？"
+    choices:
+      - body: "How long will it take to locate my bag?"
+        is_correct: true
+        feedback: |-
+          正解！<br>"How long will it take to 〜?" は所要時間を尋ねる万能構文です。"locate" を使うことで「追跡して所在を確認する」というプロセスへの期待が伝わります。
+      - body: "How soon can you find my luggage?"
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>How long will it take to locate my bag?</b> です。
+      - body: "Do you know where my bag is?"
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>How long will it take to locate my bag?</b> です。
+  - step_number: 16
+    body: "今回のフレーズをもう一度確認しましょう。<br>「荷物を見つけるのにどのくらいかかりますか？」"
+    choices:
+      - body: "How long will it take to locate my bag?"
+        is_correct: true
+        feedback: |-
+          "How long will it take to 〜?" は旅行中に何度でも使える便利な構文です。"How long will it take to get to the city center?"（市内中心部までどのくらいかかりますか？）のように応用できます。
+  - step_number: 17
+    body: "「連絡する」を英語で言うと？"
+    choices:
+      - body: "contact"
+        is_correct: true
+        feedback: |-
+          正解！「連絡する」は <b>contact</b> です。電話・メール・その他あらゆる手段での連絡を包括する便利な動詞です。"Please contact me." で「ご連絡ください」という丁寧な依頼になります。
+      - body: "call"
+        is_correct: false
+        feedback: |-
+          惜しい！「連絡する」は <b>contact</b> です。"call" は電話に限定されますが、"contact" はより広い連絡手段を含みます。
+      - body: "reach"
+        is_correct: false
+        feedback: |-
+          惜しい！「連絡する」は <b>contact</b> です。"reach" も「連絡が取れる」という意味で使えますが、"contact" の方が一般的です。
+  - step_number: 18
+    body: "「見つかったらこのホテルに連絡してください」を英語で言うと？"
+    choices:
+      - body: "Please contact me at this hotel when you find it."
+        is_correct: true
+        feedback: |-
+          正解！「見つかったらこのホテルに連絡してください」は <b>Please contact me at this hotel when you find it.</b> です。"when you find it" で「見つかったとき」という条件を自然に伝えます。
+      - body: "Call me at the hotel if you find it."
+        is_correct: false
+        feedback: |-
+          惜しい！「見つかったらこのホテルに連絡してください」は <b>Please contact me at this hotel when you find it.</b> です。
+      - body: "Let me know when my bag shows up."
+        is_correct: false
+        feedback: |-
+          惜しい！「見つかったらこのホテルに連絡してください」は <b>Please contact me at this hotel when you find it.</b> です。
+  - step_number: 19
+    body: "「見つかったらこのホテルに連絡してください。」を英語で言うと？"
+    choices:
+      - body: "Please contact me at this hotel when you find it."
+        is_correct: true
+        feedback: |-
+          正解！<br>"Please contact me at 〜" は「〜に連絡してください」という丁寧な依頼表現。"when you find it" を "if you find it" にすると「もし見つかったら」というより不確かなニュアンスになります。
+      - body: "Please notify me when the bag is found."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>Please contact me at this hotel when you find it.</b> です。
+      - body: "Send my bag to this hotel when it arrives."
+        is_correct: false
+        feedback: |-
+          惜しい！正解は <b>Please contact me at this hotel when you find it.</b> です。
+  - step_number: 20
+    body: "今回のフレーズをもう一度確認しましょう。<br>「見つかったらこのホテルに連絡してください。」"
+    choices:
+      - body: "Please contact me at this hotel when you find it."
+        is_correct: true
+        feedback: |-
+          "contact me at 〜" の "at" は「〜という場所で」という意味。ホテル名や電話番号と一緒に伝えると確実です。荷物紛失の申告書（Property Irregularity Report）を受け取ることも忘れずに。
