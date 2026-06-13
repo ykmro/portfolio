@@ -13,9 +13,9 @@ class User < ApplicationRecord
     end
 
     if self.last_login_date == today
-      return nil
+      self.login_streak = 1
     elsif self.last_login_date < Date.yesterday
-      self.login_streak = 0
+      self.login_streak = 1
     else
       self.login_streak += 1
     end

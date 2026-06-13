@@ -2,9 +2,10 @@ class StudylogsController < ApplicationController
   before_action :require_login
 
   def index
+    current_user.increment_login_streak
     @study_logs = StudyLog.includes(:loggable).order(studied_at: :desc)
     @login_streak = current_user.login_streak
-    @last_login_date = current_user.last_login_date
+    @total_study_count = @study_logs.count
   end
 
   def show
